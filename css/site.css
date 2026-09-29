@@ -439,11 +439,13 @@ thead th { background: var(--creme); font-weight: 800; }
 @media (min-width: 720px) { .prove { grid-template-columns: 1fr 150px; align-items: start; padding: 24px; } }
 .prove h3 { font-size: 1.2rem; margin: 0 0 4px; }
 .prove .sub { margin: 0 0 12px; color: var(--suave); font-size: .95rem; }
-.prove .prompt { margin: 0 0 14px; background: var(--creme); border-left: 4px solid var(--terracota); border-radius: 8px; padding: 12px 14px; font-size: .98rem; line-height: 1.5; }
-.prove .prompt mark { background: #FFE3C2; color: var(--tinta); border-radius: 4px; padding: 0 3px; }
+.prove .amostra { margin: 0 0 14px; background: var(--creme); border-left: 4px solid var(--terracota); border-radius: 8px; padding: 12px 14px; font-size: .98rem; line-height: 1.5; }
+.prove .amostra mark { background: #FFE3C2; color: var(--tinta); border-radius: 4px; padding: 0 3px; }
 .prove .acoes { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; }
 .prove .botao { font-size: .98rem; padding: 12px 20px; box-shadow: 0 4px 0 var(--chocolate); }
 .prove .ok { font-weight: 800; color: #2E7D4F; font-size: .92rem; }
 .prove .pagina { margin: 0; text-align: center; font-size: .8rem; color: var(--suave); font-weight: 700; }
 .prove .pagina img { width: 100%; height: auto; border-radius: 6px; border: 1px solid var(--borda); box-shadow: 0 6px 16px rgba(91,58,41,.12); display: block; margin-bottom: 6px; }
 @media (max-width: 719px) { .prove .pagina { display: none; } }
+.prove .ok[hidden] { display: none; }
+.prove .amostra { color: var(--tinta); font-family: var(--texto); white-space: normal; }
