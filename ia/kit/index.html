@@ -20,7 +20,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:wght@600;800&amp;family=Nunito:wght@500;700;800&amp;display=swap">
-<link rel="stylesheet" href="../../css/site.css?v=2026092904">
+<link rel="stylesheet" href="../../css/site.css?v=2026092905">
 <script src="../../js/pixel.js"></script>
 </head>
 <body class="com-cta-fixo">
@@ -61,6 +61,19 @@
       <figure><img src="../../img/ia/tela-legendas.jpg" width="400" height="844" alt="Tela com 3 legendas prontas para o Instagram de uma padaria" loading="lazy"><figcaption>Posts e legendas<small>prompts 1 a 10</small></figcaption></figure>
       <figure><img src="../../img/ia/tela-cardapio.jpg" width="400" height="844" alt="Cardápio de lanchonete organizado em lanches, salgados e bebidas" loading="lazy"><figcaption>Cardápio e catálogo<small>prompts 11 a 18</small></figcaption></figure>
       <figure><img src="../../img/ia/tela-respostas.jpg" width="400" height="844" alt="Respostas rápidas de WhatsApp para horário, entrega, Pix e encomendas" loading="lazy"><figcaption>Atendimento no WhatsApp<small>prompts 19 a 26</small></figcaption></figure>
+    </div>
+    <div class="prove">
+      <div>
+        <h3>Prove agora: o prompt 2 do kit</h3>
+        <p class="sub">É ele que gerou as legendas da primeira tela. No kit vem com os campos em branco; aqui já está preenchido com a padaria do exemplo.</p>
+        <p class="prompt" id="prompt-amostra">Escreva 3 opções de legenda para um post do Instagram da <mark>Padaria Pão da Vila</mark>, divulgando <mark>o pão de queijo</mark>. Destaque: <mark>sai quentinho às 7h e às 16h</mark>. Tom: <mark>acolhedor</mark>. Cada legenda com até 5 linhas, um convite para ação no final (ex.: "peça pelo WhatsApp") e até 5 hashtags locais de <mark>Campinas</mark>.</p>
+        <div class="acoes">
+          <button type="button" class="botao" data-copiar="prompt-amostra">Copiar prompt</button>
+          <a class="botao secundario" data-chatgpt="prompt-amostra" href="https://chatgpt.com/" target="_blank" rel="noopener">Testar no ChatGPT</a>
+          <span class="ok" data-ok hidden>Copiado! Cole na IA.</span>
+        </div>
+      </div>
+      <figure class="pagina"><img src="../../img/paginas/b-prompts-posts.jpg" width="480" height="679" alt="Página real do PDF com os prompts de posts" loading="lazy">página real do PDF</figure>
     </div>
   </div>
 </section>
@@ -210,6 +223,23 @@
     return true;
   }
   if (tique()) { var t = setInterval(function () { if (!tique()) clearInterval(t); }, 1000); }
+})();
+</script>
+<script>
+/* Amostra do kit: copiar o prompt ou abrir no ChatGPT já com ele. */
+(function () {
+  function texto(id) { return document.getElementById(id).textContent.replace(/\s+/g, ' ').trim(); }
+  document.querySelectorAll('[data-chatgpt]').forEach(function (a) {
+    a.href = 'https://chatgpt.com/?q=' + encodeURIComponent(texto(a.getAttribute('data-chatgpt')));
+  });
+  document.querySelectorAll('[data-copiar]').forEach(function (b) {
+    b.addEventListener('click', function () {
+      var t = texto(b.getAttribute('data-copiar')), ok = b.parentNode.querySelector('[data-ok]');
+      function feito() { if (ok) { ok.hidden = false; setTimeout(function () { ok.hidden = true; }, 4000); } }
+      if (navigator.clipboard) { navigator.clipboard.writeText(t).then(feito, feito); }
+      else { var r = document.createRange(); r.selectNodeContents(document.getElementById(b.getAttribute('data-copiar'))); var sel = getSelection(); sel.removeAllRanges(); sel.addRange(r); try { document.execCommand('copy'); } catch (e) {} feito(); }
+    });
+  });
 })();
 </script>
 </body>
