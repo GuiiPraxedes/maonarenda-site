@@ -13,6 +13,7 @@ fbq('track', 'PageView');
 (function () {
   var produtos = {
     '/doces/': { content_name: 'Doces para Vender', content_category: 'receitas', value: 37, currency: 'BRL' },
+    '/bolo-de-pote/': { content_name: 'Bolo de pote para vender', content_category: 'receitas', value: 19.9, currency: 'BRL' },
     '/ia/': { content_name: 'Do Celular ao Balcão', content_category: 'renda extra com IA', value: 47, currency: 'BRL' }
   };
   var caminho = location.pathname.replace(/^\/maonarenda-site/, '');
