@@ -20,7 +20,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:wght@600;800&amp;family=Nunito:wght@500;700;800&amp;display=swap">
-<link rel="stylesheet" href="../../css/site.css?v=2026092902">
+<link rel="stylesheet" href="../../css/site.css?v=2026092903">
 <script src="../../js/pixel.js"></script>
 </head>
 <body class="com-cta-fixo">
@@ -42,8 +42,10 @@
     </div>
     <div>
       <h1>50 prompts prontos para oferecer seu primeiro serviço com IA ao comércio do bairro.</h1>
+      <p class="lancamento" data-lancamento hidden><span><b>Preço de lançamento: R$ 19</b> até 06/10 às 23h59</span><span class="relogio" data-relogio>—</span><span class="depois">depois, R$ 27</span></p>
       <p class="preco"><b>R$ 19</b><span>PDF · pagamento único · IA gratuita no celular</span></p>
       <div class="botoes"><a class="botao" href="https://pay.kiwify.com.br/zuuMcMh">Quero o kit de prompts</a></div>
+      <p class="selo-garantia">Garantia de 7 dias · acesso na hora por e-mail</p>
       <p class="alternativa">Quer o passo a passo completo? <a href="../">Método por R$ 47</a></p>
     </div>
   </div>
@@ -91,8 +93,10 @@
         <li>Funciona com IA gratuita</li>
         <li>PDF para usar no celular</li>
       </ul>
+      <p class="lancamento" data-lancamento hidden><span><b>Preço de lançamento: R$ 19</b> até 06/10 às 23h59</span><span class="relogio" data-relogio>—</span><span class="depois">depois, R$ 27</span></p>
       <div class="valor"><span class="rs"><small>R$</small>19</span><span class="cond">pagamento único</span></div>
       <a class="botao largo" href="https://pay.kiwify.com.br/zuuMcMh">Quero o kit de prompts</a>
+      <p class="selo-garantia">Garantia de 7 dias: não gostou, reembolso de 100%</p>
     </div>
     <p class="pagamento">Pagamento pela Kiwify · Pix, cartão ou boleto</p>
   </div>
@@ -157,8 +161,27 @@
   </div>
 </footer>
 <div class="cta-fixo" role="region" aria-label="Comprar">
-  <div class="cta-info"><b>Kit de Prompts</b>R$ 19 · garantia de 7 dias</div>
+  <div class="cta-info"><b>Kit de Prompts</b>R$ 19 até 06/10 · garantia de 7 dias</div>
   <a class="botao" href="https://pay.kiwify.com.br/zuuMcMh">Quero</a>
 </div>
+<script>
+/* Preço de lançamento com data FIXA (não reinicia por visita). Depois do prazo a faixa some;
+   a troca do preço para R$ 27 (Kiwify + textos da página) é manual em 07/10 — ver docs/ESTADO-DO-PROJETO.md. */
+(function () {
+  var fim = new Date('2026-10-06T23:59:59-03:00').getTime();
+  var faixas = document.querySelectorAll('[data-lancamento]');
+  function dois(n) { return (n < 10 ? '0' : '') + n; }
+  function tique() {
+    var r = fim - Date.now();
+    if (r <= 0) { faixas.forEach(function (f) { f.hidden = true; }); return false; }
+    var s = Math.floor(r / 1000), d = Math.floor(s / 86400), h = Math.floor(s % 86400 / 3600),
+        m = Math.floor(s % 3600 / 60), x = s % 60;
+    var txt = (d ? d + (d > 1 ? ' dias ' : ' dia ') : '') + dois(h) + ':' + dois(m) + ':' + dois(x);
+    faixas.forEach(function (f) { f.hidden = false; f.querySelector('[data-relogio]').textContent = 'faltam ' + txt; });
+    return true;
+  }
+  if (tique()) { var t = setInterval(function () { if (!tique()) clearInterval(t); }, 1000); }
+})();
+</script>
 </body>
 </html>
