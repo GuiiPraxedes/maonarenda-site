@@ -395,3 +395,18 @@ thead th { background: var(--creme); font-weight: 800; }
 /* créditos das fotos */
 .creditos img { width: 64px; min-width: 64px; max-width: none; height: 64px; object-fit: cover; border-radius: 8px; }
 .creditos td { vertical-align: middle; }
+
+/* ---------- Vídeo real no topo das páginas de venda (29/09) ---------- */
+.palco.video { aspect-ratio: 4 / 5; background: #1d1611; }
+@media (max-width: 899px) { .hero-venda .palco.video { aspect-ratio: 4 / 5; height: auto; max-height: 62vh; } }
+.palco.video video { width: 100%; height: 100%; object-fit: cover; object-position: center 45%; display: block; }
+.palco .chip { position: absolute; left: 4%; top: 4%; background: rgba(43, 33, 24, .85); color: var(--creme); font-weight: 800;
+  font-size: .85rem; padding: 6px 12px; border-radius: 999px; }
+.palco.video .capa-mini.c1 { left: 5%; bottom: 5%; width: 26%; }
+.telas { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 22px; max-width: 900px; margin: 0 auto; }
+@media (max-width: 699px) { .telas { grid-template-columns: none; grid-auto-flow: column; grid-auto-columns: 64%; overflow-x: auto;
+  scroll-snap-type: x mandatory; padding: 4px 4px 12px; } .telas figure { scroll-snap-align: start; } }
+.telas figure { margin: 0; }
+.telas img { width: 100%; height: auto; display: block; border-radius: 30px; border: 9px solid #1d1611; background: #fff; box-shadow: var(--sombra); }
+.telas figcaption { font-weight: 800; margin-top: 12px; text-align: center; }
+.telas figcaption small { display: block; font-weight: 600; color: var(--suave); }
