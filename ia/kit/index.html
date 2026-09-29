@@ -20,7 +20,8 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:wght@600;800&amp;family=Nunito:wght@500;700;800&amp;display=swap">
-<link rel="stylesheet" href="../../css/site.css?v=2026092906">
+<link rel="stylesheet" href="../../css/site.css?v=2026092907">
+<script src="../../js/preco.js"></script>
 <script src="../../js/pixel.js"></script>
 </head>
 <body class="com-cta-fixo">
@@ -43,7 +44,7 @@
     <div>
       <h1>50 prompts prontos para oferecer seu primeiro serviço com IA ao comércio do bairro.</h1>
       <p class="lancamento" data-lancamento hidden><span><b>Preço promocional: R$ 19</b> até 06/10 às 23h59</span><span class="relogio" data-relogio>—</span><span class="depois">depois, R$ 27</span></p>
-      <p class="preco"><b>R$ 19</b><span>PDF · pagamento único · IA gratuita no celular</span></p>
+      <p class="preco"><b data-kit="R$ 19|R$ 27">R$ 19</b><span>PDF · pagamento único · IA gratuita no celular</span></p>
       <div class="botoes"><a class="botao" href="https://pay.kiwify.com.br/zuuMcMh">Quero o kit de prompts</a></div>
       <p class="selo-garantia">Garantia de 7 dias · acesso na hora por e-mail</p>
       <p class="alternativa">Quer o passo a passo completo? <a href="../">Método por R$ 47</a></p>
@@ -94,35 +95,6 @@
   </div>
 </section>
 
-<section class="secao enxuta creme-2">
-  <div class="container">
-    <div class="cabeca"><h2>Quem já comprou</h2><p>Mensagens de clientes que compraram pessoalmente.</p></div>
-    <div class="depoimentos">
-      <figure class="depo">
-        <blockquote>Amei o resultado! O serviço com IA agilizou tudo e superou minhas expectativas.</blockquote>
-        <figcaption><span class="ini" aria-hidden="true">C</span><span>Cristina A.<small>cliente, compra presencial</small></span></figcaption>
-      </figure>
-      <figure class="depo">
-        <blockquote>Muito bom! Ficou profissional, rápido e me ajudou bastante no dia a dia.</blockquote>
-        <figcaption><span class="ini" aria-hidden="true">F</span><span>Fabricio N.<small>cliente, compra presencial</small></span></figcaption>
-      </figure>
-      <figure class="depo">
-        <blockquote>Excelente experiência. A solução com IA trouxe praticidade e mais eficiência para o meu trabalho.</blockquote>
-        <figcaption><span class="ini" aria-hidden="true">L</span><span>Lucas S.<small>cliente, compra presencial</small></span></figcaption>
-      </figure>
-      <figure class="depo">
-        <blockquote>Fiquei surpresa com a qualidade. Atendimento ágil e entrega muito bem feita!</blockquote>
-        <figcaption><span class="ini" aria-hidden="true">M</span><span>Monica M.<small>cliente, compra presencial</small></span></figcaption>
-      </figure>
-      <figure class="depo">
-        <blockquote>Recomendo! O produto é útil, moderno e realmente entrega valor.</blockquote>
-        <figcaption><span class="ini" aria-hidden="true">P</span><span>Patricia T.<small>cliente, compra presencial</small></span></figcaption>
-      </figure>
-    </div>
-    <p class="nota-depo">Publicado com autorização de cada cliente, com o texto como foi escrito. Resultados variam.</p>
-  </div>
-</section>
-
 <section class="secao enxuta" id="oferta">
   <div class="container estreito">
     <div class="oferta principal" style="max-width:520px;margin:0 auto">
@@ -136,7 +108,7 @@
         <li>PDF para usar no celular</li>
       </ul>
       <p class="lancamento" data-lancamento hidden><span><b>Preço promocional: R$ 19</b> até 06/10 às 23h59</span><span class="relogio" data-relogio>—</span><span class="depois">depois, R$ 27</span></p>
-      <div class="valor"><span class="rs"><small>R$</small>19</span><span class="cond">pagamento único</span></div>
+      <div class="valor"><span class="rs"><small>R$</small><span data-kit="19|27">19</span></span><span class="cond">pagamento único</span></div>
       <a class="botao largo" href="https://pay.kiwify.com.br/zuuMcMh">Quero o kit de prompts</a>
       <p class="selo-garantia">Garantia de 7 dias: não gostou, reembolso de 100%</p>
     </div>
@@ -203,41 +175,40 @@
   </div>
 </footer>
 <div class="cta-fixo" role="region" aria-label="Comprar">
-  <div class="cta-info"><b>Kit de Prompts</b>R$ 19 até 06/10 · garantia de 7 dias</div>
+  <div class="cta-info"><b>Kit de Prompts</b><span data-kit="R$ 19 até 06/10|R$ 27">R$ 19 até 06/10</span> · garantia de 7 dias</div>
   <a class="botao" href="https://pay.kiwify.com.br/zuuMcMh">Quero</a>
 </div>
+<!-- A faixa do preço promocional (contagem regressiva) e a virada para R$ 27 em 07/10 ficam em js/preco.js. -->
 <script>
-/* Preço promocional com data FIXA (não reinicia por visita). Depois do prazo a faixa some;
-   a troca do preço para R$ 27 (Kiwify + textos da página) é manual em 07/10 — ver docs/ESTADO-DO-PROJETO.md. */
-(function () {
-  var fim = new Date('2026-10-06T23:59:59-03:00').getTime();
-  var faixas = document.querySelectorAll('[data-lancamento]');
-  function dois(n) { return (n < 10 ? '0' : '') + n; }
-  function tique() {
-    var r = fim - Date.now();
-    if (r <= 0) { faixas.forEach(function (f) { f.hidden = true; }); return false; }
-    var s = Math.floor(r / 1000), d = Math.floor(s / 86400), h = Math.floor(s % 86400 / 3600),
-        m = Math.floor(s % 3600 / 60), x = s % 60;
-    var txt = (d ? d + (d > 1 ? ' dias ' : ' dia ') : '') + dois(h) + ':' + dois(m) + ':' + dois(x);
-    faixas.forEach(function (f) { f.hidden = false; f.querySelector('[data-relogio]').textContent = 'faltam ' + txt; });
-    return true;
-  }
-  if (tique()) { var t = setInterval(function () { if (!tique()) clearInterval(t); }, 1000); }
-})();
-</script>
-<script>
-/* Amostra do kit: copiar o prompt ou abrir no ChatGPT já com ele. */
+/* Amostra do kit: copiar o prompt ou abrir no ChatGPT já com ele.
+   "Copiado!" só quando a cópia deu certo; se falhar, o texto fica selecionado para a pessoa copiar. */
 (function () {
   function texto(id) { return document.getElementById(id).textContent.replace(/\s+/g, ' ').trim(); }
   document.querySelectorAll('[data-chatgpt]').forEach(function (a) {
     a.href = 'https://chatgpt.com/?q=' + encodeURIComponent(texto(a.getAttribute('data-chatgpt')));
   });
   document.querySelectorAll('[data-copiar]').forEach(function (b) {
+    var alvo = document.getElementById(b.getAttribute('data-copiar')), ok = b.parentNode.querySelector('[data-ok]'), espera;
+    function avisar(msg) {
+      if (!ok) return;
+      ok.textContent = msg; ok.hidden = false;
+      clearTimeout(espera); espera = setTimeout(function () { ok.hidden = true; }, 4000);
+    }
+    function selecionar() {
+      var r = document.createRange(); r.selectNodeContents(alvo);
+      var sel = window.getSelection(); sel.removeAllRanges(); sel.addRange(r);
+      return sel;
+    }
+    function semApi() {
+      var sel = selecionar(), deu = false;
+      try { deu = document.execCommand('copy'); } catch (e) {}
+      if (deu) { sel.removeAllRanges(); avisar('Copiado! Cole na IA.'); }
+      else avisar('Selecionei o texto: é só copiar.');
+    }
     b.addEventListener('click', function () {
-      var t = texto(b.getAttribute('data-copiar')), ok = b.parentNode.querySelector('[data-ok]');
-      function feito() { if (ok) { ok.hidden = false; setTimeout(function () { ok.hidden = true; }, 4000); } }
-      if (navigator.clipboard) { navigator.clipboard.writeText(t).then(feito, feito); }
-      else { var r = document.createRange(); r.selectNodeContents(document.getElementById(b.getAttribute('data-copiar'))); var sel = getSelection(); sel.removeAllRanges(); sel.addRange(r); try { document.execCommand('copy'); } catch (e) {} feito(); }
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(texto(alvo.id)).then(function () { avisar('Copiado! Cole na IA.'); }, semApi);
+      } else semApi();
     });
   });
 })();

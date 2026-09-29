@@ -4,13 +4,13 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Política de privacidade | Mão na Renda</title>
-<meta name="description" content="Como a Mão na Renda trata dados pessoais: o site não coleta dados, as compras são processadas pela Kiwify e cookies de medição de anúncios da Meta podem ser usados quando ativados.">
+<meta name="description" content="Como a Mão na Renda trata dados pessoais: o site usa o pixel da Meta para medir anúncios, as compras são processadas pela Kiwify e a Kiwify pode entrar em contato com quem não concluiu a compra.">
 <meta name="theme-color" content="#C4552D">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="pt_BR">
 <meta property="og:site_name" content="Mão na Renda">
 <meta property="og:title" content="Política de privacidade | Mão na Renda">
-<meta property="og:description" content="Como a Mão na Renda trata dados pessoais: o site não coleta dados, as compras são processadas pela Kiwify e cookies de medição de anúncios da Meta podem ser usados quando ativados.">
+<meta property="og:description" content="Como a Mão na Renda trata dados pessoais: o site usa o pixel da Meta para medir anúncios, as compras são processadas pela Kiwify e a Kiwify pode entrar em contato com quem não concluiu a compra.">
 <meta property="og:image" content="https://maonarenda.com.br/img/og-home.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
@@ -20,7 +20,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:wght@600;800&amp;family=Nunito:wght@500;700;800&amp;display=swap">
-<link rel="stylesheet" href="../css/site.css?v=2026092906">
+<link rel="stylesheet" href="../css/site.css?v=2026092907">
 <script src="../js/pixel.js"></script>
 </head>
 <body>
@@ -37,33 +37,36 @@
   <div class="container estreito texto-longo">
     <span class="chapeu">Transparência</span>
     <h1>Política de privacidade</h1>
-    <p class="atualizado">Última atualização: 28 de setembro de 2026.</p>
-    <p>Esta política explica, em linguagem simples, como a Mão na Renda trata dados pessoais neste site, de acordo com a Lei Geral de Proteção de Dados (Lei nº 13.709/2018, LGPD).</p>
+    <p class="atualizado">Última atualização: 29 de setembro de 2026.</p>
+    <p>Esta política explica, em linguagem simples, como a Mão na Renda trata dados pessoais neste site e nas compras, de acordo com a Lei Geral de Proteção de Dados (Lei nº 13.709/2018, LGPD).</p>
 
     <h2>1. O que este site coleta</h2>
-    <p><strong>Nada diretamente.</strong> Este site é formado por páginas estáticas: não tem formulário, não pede cadastro, não pede e-mail e não guarda dados de quem visita. O guia gratuito é baixado direto, sem nenhum cadastro.</p>
-    <p>Como qualquer site na internet, o serviço de hospedagem pode registrar dados técnicos de acesso (como endereço IP, navegador e página visitada) para segurança e funcionamento. Esses registros são tratados pelo provedor de hospedagem, conforme as políticas dele.</p>
-    <p>As fontes de texto são carregadas do Google Fonts, o que faz o seu navegador se conectar aos servidores do Google para baixar os arquivos de fonte.</p>
+    <p>Este site é formado por páginas estáticas: não tem formulário, não pede cadastro e não pede e-mail. O guia gratuito é baixado direto, sem nenhum cadastro.</p>
+    <p>O site usa o <strong>pixel da Meta</strong> (Facebook e Instagram) para medir os nossos anúncios. Ele registra as páginas visitadas, a visualização das páginas de produto e o download do guia gratuito, e guarda no seu navegador os cookies <strong>_fbp</strong> e, quando você chega por um anúncio, <strong>_fbc</strong>. Esses dados vão para a Meta, que os trata conforme a política de dados dela.</p>
+    <p>Quando você chega por um anúncio, os parâmetros do link (como utm_source, utm_campaign, utm_content e fbclid) são repassados ao checkout, para sabermos qual anúncio levou à compra.</p>
+    <p>Como qualquer site, o serviço de hospedagem (GitHub Pages) pode registrar dados técnicos de acesso (como endereço IP, navegador e página visitada) para segurança e funcionamento. As fontes de texto são carregadas do Google Fonts, o que faz o seu navegador se conectar aos servidores do Google.</p>
 
     <h2>2. Compras e pagamentos</h2>
-    <p>Quando você clica em um botão de compra, é levado ao checkout da <strong>Kiwify</strong>, plataforma que processa o pagamento e entrega o material. Os dados informados na compra (nome, e-mail, CPF, dados de pagamento) são coletados e tratados pela Kiwify, conforme a política de privacidade dela. Nós recebemos da plataforma apenas as informações necessárias para identificar a compra, entregar o produto, prestar suporte e cumprir obrigações legais e fiscais.</p>
-    <p>Não temos acesso ao número completo do seu cartão.</p>
+    <p>Quando você clica em um botão de compra, é levado ao checkout da <strong>Kiwify</strong>, plataforma que processa o pagamento e entrega o material. Os dados informados no checkout (nome, e-mail, telefone, CPF e dados de pagamento) são coletados e tratados pela Kiwify, conforme a política de privacidade dela. Nós recebemos da plataforma apenas o necessário para identificar a compra, entregar o produto, prestar suporte e cumprir obrigações legais e fiscais. Não temos acesso ao número completo do seu cartão.</p>
+    <p>O checkout também tem o pixel da Meta. Quando uma compra é aprovada, a Kiwify informa a Meta, pelo navegador e diretamente de servidor para servidor (API de Conversões), que houve uma compra, com o valor e dados de contato <strong>convertidos em código (hash)</strong>, para medir e melhorar os anúncios.</p>
 
-    <h2>3. Cookies e medição de anúncios</h2>
-    <p>Hoje este site não usa cookies próprios. Quando fizermos anúncios, poderemos ativar o <strong>pixel da Meta</strong> (Facebook e Instagram) neste site e no checkout. Quando ativado, ele usa <strong>cookies de medição de anúncios</strong> para saber, de forma agregada, se um anúncio levou a uma visita ou a uma compra e para mostrar anúncios a públicos parecidos. A Meta trata esses dados conforme a política de dados dela.</p>
-    <p>Você pode bloquear ou apagar cookies nas configurações do seu navegador e ajustar suas preferências de anúncios nas configurações da sua conta Meta. Se ativarmos o pixel, esta política será atualizada com a data da mudança.</p>
+    <h2>3. Contato sobre compra não concluída</h2>
+    <p>Se você preencher os seus dados no checkout e não concluir a compra (carrinho abandonado, Pix gerado e não pago ou pagamento recusado), a Kiwify pode entrar em contato pelo e-mail ou telefone que você informou, com um assistente automático, para ajudar a concluir a compra. Você pode pedir para não receber mais esses contatos respondendo a própria mensagem ou falando com a gente.</p>
 
-    <h2>4. Compartilhamento</h2>
-    <p>Não vendemos nem alugamos dados pessoais. Dados só são compartilhados com os serviços necessários para o site e as compras funcionarem (hospedagem, Kiwify e, quando ativado, Meta) ou quando a lei exigir.</p>
+    <h2>4. Como recusar a medição</h2>
+    <p>Você pode bloquear ou apagar cookies nas configurações do seu navegador e ajustar suas preferências de anúncios nas configurações da sua conta Meta. O site continua funcionando normalmente sem os cookies.</p>
 
-    <h2>5. Seus direitos</h2>
+    <h2>5. Compartilhamento</h2>
+    <p>Não vendemos nem alugamos dados pessoais. Dados só são compartilhados com os serviços necessários para o site e as compras funcionarem (hospedagem, Google Fonts, Kiwify e Meta) ou quando a lei exigir.</p>
+
+    <h2>6. Seus direitos</h2>
     <p>Pela LGPD, você pode pedir confirmação de que tratamos seus dados, acesso, correção, anonimização, eliminação, portabilidade e informações sobre compartilhamento, além de revogar consentimentos. Para dados de compra, você também pode falar diretamente com a Kiwify.</p>
 
-    <h2>6. Contato</h2>
-    <p>Fale com a gente pelo direct do Instagram <a href="https://www.instagram.com/maonarendaoficial/" rel="noopener">@maonarendaoficial</a>. Respondemos pedidos sobre dados pessoais o quanto antes, dentro dos prazos da lei.</p>
+    <h2>7. Contato</h2>
+    <p>Fale com a gente pelo direct do Instagram <a href="https://www.instagram.com/maonarendaoficial/" rel="noopener">@maonarendaoficial</a>. Sobre uma compra, você também pode responder o e-mail enviado pela Kiwify. Respondemos pedidos sobre dados pessoais o quanto antes, dentro dos prazos da lei.</p>
 
-    <h2>7. Mudanças nesta política</h2>
-    <p>Se mudarmos a forma de tratar dados (por exemplo, ao ativar o pixel ou criar uma lista de e-mails), esta página será atualizada e a data acima, alterada.</p>
+    <h2>8. Mudanças nesta política</h2>
+    <p>Se mudarmos a forma de tratar dados (por exemplo, ao criar uma lista de e-mails), esta página será atualizada e a data acima, alterada.</p>
   </div>
 </section>
 
