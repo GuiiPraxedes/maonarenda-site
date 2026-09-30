@@ -1,7 +1,7 @@
 /* Virada do preço do Kit de Prompts: R$ 19 (promocional) até 06/10 às 23h59; R$ 27 a partir de 07/10 00:00 (Brasília).
    A data fica SÓ aqui. Carregar no <head>, ANTES do pixel.js: ele lê window.MNR_PRECO_KIT para o value do ViewContent.
    - [data-kit="antes|depois"]: na virada, o texto do elemento vira o "depois" (vazio = o trecho some).
-     O HTML já traz o "antes"; marcar só preço do Kit (nunca o bolo de 19,90).
+     O HTML já traz o "antes"; marcar só preço do Kit.
    - [data-lancamento]: faixa do preço promocional com contagem regressiva ([data-relogio]); some na virada.
    O relógio é o do aparelho do visitante. Meta description e og:description não mudam por JS: editar à mão em 07/10. */
 (function () {
