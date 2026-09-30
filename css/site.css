@@ -399,6 +399,10 @@ thead th { background: var(--creme); font-weight: 800; }
 /* ---------- Vídeo real no topo das páginas de venda (29/09) ---------- */
 .palco.video { aspect-ratio: 4 / 5; background: #1d1611; }
 @media (max-width: 899px) { .hero-venda .palco.video { aspect-ratio: 4 / 5; height: auto; max-height: 48vh; width: 100%; } }
+/* .compacto (/ia/kit/): no celular, com a barra fixa, o vídeo baixo deixa o preço e o botão na 1ª tela (em 375x812,
+   o botão termina acima da barra). svh = altura com a barra de endereço à mostra, que é a da 1ª tela. */
+@media (max-width: 759px) { .hero-venda .palco.video.compacto { max-height: 31vh; max-height: 31svh; }
+  .hero-venda .palco.video.compacto .capa-mini.c1 { width: 19%; } }
 .palco.video video { width: 100%; height: 100%; object-fit: cover; object-position: center 45%; display: block; }
 .palco .chip { position: absolute; right: 4%; bottom: 4%; background: rgba(43, 33, 24, .85); color: var(--creme); font-weight: 800;
   font-size: .85rem; padding: 6px 12px; border-radius: 999px; }
