@@ -21,7 +21,7 @@
   fbq('init', '1771734920743764');
   fbq('track', 'PageView');
 
-  // Kit: 19 até 06/10, 27 a partir de 07/10 00:00. O valor e a data vêm de js/preco.js, carregado antes deste
+  // Kit: R$ 19 (virada de 07/10 cancelada em 06/10/2026). O valor vem de js/preco.js, carregado antes deste
   // arquivo na /ia/kit/; se ele não carregar, a página continua mostrando R$ 19, e o value acompanha.
   var produtos = {
     '/ia/kit/': { content_name: 'Kit de Prompts', content_category: 'renda extra com IA', value: window.MNR_PRECO_KIT || 19, currency: 'BRL' },
