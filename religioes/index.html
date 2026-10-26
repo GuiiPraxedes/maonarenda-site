@@ -23,8 +23,12 @@ section{padding:56px 0}
 .rotulo{font-weight:800;letter-spacing:3px;font-size:14px;text-transform:uppercase;color:#a0782a;margin-bottom:10px}
 .hero{text-align:center;padding:48px 0 56px}
 .simb{color:var(--ouro);font-size:28px;letter-spacing:16px;margin-bottom:18px}
-.hero-foto{background:linear-gradient(180deg,rgba(8,16,30,.15) 0%,rgba(8,16,30,.35) 35%,rgba(8,16,30,.92) 62%,var(--noite) 100%),url('img/hero.jpg') center top/cover no-repeat;min-height:92vh;display:flex;align-items:flex-end;padding-top:46vh}
-.hero-foto h1{text-shadow:0 4px 18px rgba(0,0,0,.8)}
+.hero-foto{padding-top:0;background:var(--noite)}
+.hero-arte{position:relative;max-width:760px;margin:0 auto}
+.hero-arte img{display:block;width:100%;height:340px;object-fit:cover;object-position:50% 38%}
+.hero-arte:after{content:"";position:absolute;left:0;right:0;bottom:0;height:90px;background:linear-gradient(180deg,rgba(8,16,30,0),var(--noite))}
+.hero-foto .w{margin-top:-28px;position:relative}
+.oferta-capa{width:190px;margin:6px auto 22px}
 .descobrir{list-style:none;margin-top:10px}
 .descobrir li{padding:12px 0 12px 36px;position:relative;border-bottom:1px solid #efe7d4;font-weight:600}
 .descobrir li:before{content:"🔑";position:absolute;left:0;top:11px}
@@ -63,21 +67,22 @@ td:first-child{font-weight:700;white-space:nowrap}
 details{background:#fff;border:1px solid #eadfc6;border-radius:12px;padding:14px 18px;margin-bottom:10px}
 summary{font-weight:700;cursor:pointer}
 details p{margin-top:8px}
+.ampliar{text-align:center;font-size:14px;color:#8a7b5c;margin-top:8px}
 .amostra img{width:100%;border-radius:10px;box-shadow:0 8px 24px rgba(0,0,0,.18);margin-top:12px}
 footer{text-align:center;font-size:14px;color:var(--suave);padding:28px 20px}
 footer a{color:var(--suave)}
-@media (max-width:560px){.hero h1{font-size:31px}h2{font-size:26px}ol.perguntas{columns:1}.preco .por{font-size:54px}}
+@media (max-width:560px){.hero-arte img{height:250px;object-position:50% 36%}.hero h1{font-size:30px}.hero p{font-size:18px;margin-bottom:20px}.hero{padding-bottom:40px}h2{font-size:26px}ol.perguntas{columns:1}.preco .por{font-size:54px}}
 </style>
 </head>
 <body>
 
 <section class="escuro hero hero-foto">
+  <div class="hero-arte"><img src="img/hero.jpg" alt="Jesus e o diabo frente a frente" width="1100" height="1375" fetchpriority="high"></div>
   <div class="w">
     <h1>O diabo existe mesmo? <b>Depende de quem responde.</b></h1>
-    <p>Você cresceu ouvindo uma resposta. Outras religiões dão respostas bem diferentes, e algumas vão te surpreender. Veja as 9, lado a lado, em linguagem simples e com a fonte de cada uma.</p>
+    <p>Você cresceu ouvindo uma resposta. Veja o que 9 religiões ensinam, lado a lado, em linguagem simples e com a fonte de cada uma.</p>
     <a class="btn" href="https://pay.kiwify.com.br/J0er2R5" data-funil-cta="topo">Ver as respostas · R$&nbsp;19,90</a>
     <div class="selos">PDF no celular · acesso na hora · 7 dias de garantia</div>
-    <img class="capa" src="img/capa.jpg" alt="Capa do livro Deus, o Diabo e o Céu">
   </div>
 </section>
 
@@ -137,7 +142,7 @@ footer a{color:var(--suave)}
     <div class="rotulo">Veja como é por dentro</div>
     <h2>Cada pergunta abre com um quadro lado a lado</h2>
     <p>Você bate o olho e vê as 9 respostas juntas. Depois vem um parágrafo curto sobre cada religião, sempre dizendo de onde vem a ideia, e no fim as fontes.</p>
-    <div class="amostra"><img src="img/amostra.jpg" alt="Página de exemplo do livro com o quadro comparativo"></div>
+    <div class="amostra"><a href="img/amostra.jpg" target="_blank" rel="noopener"><img src="img/amostra.jpg" alt="Página de exemplo do livro com o quadro comparativo"></a><div class="ampliar">Toque na página para ver em tamanho real</div></div>
     <p style="margin-top:14px">As 9 tradições do livro:</p>
     <div class="trad"><span>Catolicismo</span><span>Protestantismo</span><span>Judaísmo</span><span>Islamismo</span><span>Espiritismo</span><span>Budismo</span><span>Hinduísmo</span><span>Candomblé</span><span>Umbanda</span></div>
   </div>
@@ -158,6 +163,7 @@ footer a{color:var(--suave)}
   <div class="w">
     <div class="rotulo">O que você recebe</div>
     <h2>Deus, o Diabo e o Céu</h2>
+    <img class="capa oferta-capa" src="img/capa.jpg" alt="Capa do livro Deus, o Diabo e o Céu" loading="lazy">
     <ul class="lista">
       <li>O livro em PDF, com as 12 perguntas respondidas por 9 religiões, lado a lado</li>
       <li>Um quadro no começo de cada pergunta, para entender em 1 minuto</li>
