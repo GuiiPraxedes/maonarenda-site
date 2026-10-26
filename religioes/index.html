@@ -23,6 +23,11 @@ section{padding:56px 0}
 .rotulo{font-weight:800;letter-spacing:3px;font-size:14px;text-transform:uppercase;color:#a0782a;margin-bottom:10px}
 .hero{text-align:center;padding:48px 0 56px}
 .simb{color:var(--ouro);font-size:28px;letter-spacing:16px;margin-bottom:18px}
+.hero-foto{background:linear-gradient(180deg,rgba(8,16,30,.15) 0%,rgba(8,16,30,.35) 35%,rgba(8,16,30,.92) 62%,var(--noite) 100%),url('img/hero.jpg') center top/cover no-repeat;min-height:92vh;display:flex;align-items:flex-end;padding-top:46vh}
+.hero-foto h1{text-shadow:0 4px 18px rgba(0,0,0,.8)}
+.descobrir{list-style:none;margin-top:10px}
+.descobrir li{padding:12px 0 12px 36px;position:relative;border-bottom:1px solid #efe7d4;font-weight:600}
+.descobrir li:before{content:"🔑";position:absolute;left:0;top:11px}
 .hero h1{font-size:40px;margin-bottom:16px}
 .hero h1 b{color:var(--ouro)}
 .hero p{font-size:20px;color:#d8dee9;max-width:620px;margin:0 auto 26px}
@@ -66,14 +71,30 @@ footer a{color:var(--suave)}
 </head>
 <body>
 
-<section class="escuro hero">
+<section class="escuro hero hero-foto">
   <div class="w">
-    <div class="simb">✝ ☪ ✡ ☸ ॐ</div>
-    <h1>O diabo existe? O que acontece <b>depois da morte?</b></h1>
-    <p>Cada religião responde de um jeito. Veja o que 9 delas ensinam, lado a lado, em linguagem simples e com a fonte de cada resposta.</p>
+    <h1>O diabo existe mesmo? <b>Depende de quem responde.</b></h1>
+    <p>Você cresceu ouvindo uma resposta. Outras religiões dão respostas bem diferentes, e algumas vão te surpreender. Veja as 9, lado a lado, em linguagem simples e com a fonte de cada uma.</p>
     <a class="btn" href="https://pay.kiwify.com.br/J0er2R5" data-funil-cta="topo">Ver as respostas · R$&nbsp;19,90</a>
     <div class="selos">PDF no celular · acesso na hora · 7 dias de garantia</div>
     <img class="capa" src="img/capa.jpg" alt="Capa do livro Deus, o Diabo e o Céu">
+  </div>
+</section>
+
+<section style="background:#fff">
+  <div class="w">
+    <div class="rotulo">O que você vai descobrir</div>
+    <h2>Perguntas que <b>quase ninguém sabe responder</b></h2>
+    <ul class="descobrir">
+      <li>Por que a Bíblia dos católicos tem 7 livros que a dos evangélicos não tem</li>
+      <li>O capítulo do Alcorão que tem o nome de Maria, a mãe de Jesus</li>
+      <li>Quem chamou Exu de diabo, e em que século isso começou</li>
+      <li>Para os espíritas não existe diabo eterno. Então quem são os "demônios"?</li>
+      <li>Por que, para muitos rabinos, o inferno dura no máximo 12 meses</li>
+      <li>Reencarnação ou ressurreição: quem acredita em quê</li>
+      <li>Por que o budismo não fala de um Deus criador</li>
+      <li>Quem vai para o céu, segundo cada uma das 9 religiões</li>
+    </ul>
   </div>
 </section>
 
