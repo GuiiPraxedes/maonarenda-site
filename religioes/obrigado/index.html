@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Oferta especial | Religiões Explicadas</title>
+<meta name="robots" content="noindex, nofollow">
+<link rel="icon" type="image/png" href="../../img/icone.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+  :root { --red:#b23a48; --amber:#e9c46a; --amber-light:#fbf8f1; --green:#c9a227; --green-dark:#1d3557;
+          --text:#1f2328; --muted:#5d6d7e; }
+  * { box-sizing:border-box; }
+  body { margin:0; font-family:'Source Sans 3',sans-serif; color:var(--text); background:var(--amber-light); }
+  .aviso { background:var(--green); color:#fff; text-align:center; padding:12px 16px; font-weight:600; margin:0; }
+  .caixa { max-width:960px; margin:0 auto; padding:28px 16px 48px; display:grid; gap:28px; }
+  @media (min-width:760px) { .caixa { grid-template-columns:360px 1fr; align-items:start; padding-top:44px; } }
+  .capa { width:100%; max-width:360px; height:auto; border-radius:12px; box-shadow:0 12px 30px rgba(0,0,0,.18);
+          justify-self:center; }
+  .etiqueta { display:inline-block; background:var(--red); color:#fff; font-weight:700; font-size:14px;
+              letter-spacing:1px; text-transform:uppercase; padding:6px 12px; border-radius:6px; margin:0 0 14px; }
+  h1 { font-family:'Playfair Display',serif; font-size:32px; line-height:1.15; margin:0 0 14px; }
+  .texto { font-size:19px; line-height:1.5; margin:0 0 16px; }
+  ul { margin:0 0 20px; padding:0; list-style:none; }
+  li { padding:6px 0 6px 30px; position:relative; font-size:18px; }
+  li::before { content:"✓"; position:absolute; left:0; color:var(--green); font-weight:700; }
+  .preco { font-size:20px; margin:0 0 18px; }
+  .preco s { color:var(--muted); }
+  .preco b { color:var(--green-dark); font-size:34px; margin-left:6px; }
+  .preco span { display:block; font-size:15px; color:var(--muted); margin-top:4px; }
+  #kiwify-upsell-bIFQKeL button { width:100%; font-family:'Source Sans 3',sans-serif; font-size:20px; font-weight:700; }
+  .nota { font-size:15px; color:var(--muted); margin:16px 0 0; }
+</style>
+</head>
+<body>
+<p class="aviso">✓ Pagamento confirmado! O seu livro já foi liberado: o acesso chega no seu e-mail em alguns minutos.</p>
+<main class="caixa">
+  <img class="capa" src="../../img/upsell-passagens.jpg" width="600" height="900" alt="Capa do livro 30 Passagens Sagradas Explicadas">
+  <div>
+    <p class="etiqueta">Oferta só para esta página</p>
+    <h1>Espere! Quer ler os textos que as religiões citam?</h1>
+    <p class="texto">No livro você viu o que cada religião ensina. Em <b>30 Passagens Sagradas Explicadas</b> você lê os trechos de onde isso vem: o Pai-Nosso, o Salmo 23, a primeira surata do Alcorão, o Shemá, o Bhagavad Gita e outros, com o contexto de cada um e como cada tradição o entende.</p>
+    <ul>
+      <li>12 passagens da Bíblia, do Gênesis ao Apocalipse</li>
+      <li>6 do Alcorão, 2 da tradição judaica e 3 do Bhagavad Gita</li>
+      <li>Textos budistas, espíritas e afro-brasileiros</li>
+      <li>Em cada uma: o texto, o contexto, o que a tradição entende e como outra tradição lê</li>
+    </ul>
+    <p class="preco"><s>R$ 67,00</s> <b>R$ 29,90</b><span>No cartão, é só um clique, sem digitar nada de novo. No Pix, é só pagar o novo código.</span></p>
+    <div id="kiwify-upsell-bIFQKeL" data-upsell-url="" data-downsell-url="" style="--kiwify-upsell-accept-bg:#c9a227;--kiwify-upsell-accept-color:#ffffff">
+      <button id="kiwify-upsell-trigger-bIFQKeL">SIM, QUERO POR R$ 29,90</button>
+      <div id="kiwify-upsell-cancel-trigger-bIFQKeL">Não, obrigado. Fico só com o livro</div>
+    </div>
+    <script src="https://snippets.kiwify.com/upsell-v2/upsell.min.js"></script>
+    <p class="nota">Se os botões não aparecerem, não se preocupe: o acesso ao que você já comprou vai para o seu e-mail, enviado pela Kiwify. Garantia de 7 dias.</p>
+  </div>
+</main>
+</body>
+</html>
