@@ -23,6 +23,9 @@ section{padding:56px 0}
 .rotulo{font-weight:800;letter-spacing:3px;font-size:14px;text-transform:uppercase;color:#a0782a;margin-bottom:10px}
 .hero{text-align:center;padding:48px 0 56px}
 .simb{color:var(--ouro);font-size:28px;letter-spacing:16px;margin-bottom:18px}
+.vsl{position:relative;width:300px;max-width:82%;margin:0 auto 22px}
+.vsl video{display:block;width:100%;aspect-ratio:9/16;border-radius:14px;background:#000;box-shadow:0 18px 40px rgba(0,0,0,.45)}
+.vsl-som{position:absolute;left:50%;bottom:16px;transform:translateX(-50%);white-space:nowrap;background:var(--botao);color:#111;border:0;border-radius:999px;padding:12px 18px;font:800 16px 'Source Sans 3',sans-serif;cursor:pointer;box-shadow:0 6px 16px rgba(0,0,0,.4)}
 .hero-foto{padding-top:0;background:var(--noite)}
 .hero-arte{position:relative;max-width:760px;margin:0 auto}
 .hero-arte img{display:block;width:100%;height:340px;object-fit:cover;object-position:50% 38%}
@@ -83,10 +86,13 @@ footer a{color:var(--suave)}
 </head>
 <body>
 
-<section class="escuro hero hero-foto">
-  <div class="hero-arte"><img src="img/hero.jpg" alt="Jesus e o diabo frente a frente" width="1100" height="1375" fetchpriority="high"></div>
+<section class="escuro hero">
   <div class="w">
     <h1>O diabo existe mesmo? <b>Depende de quem responde.</b></h1>
+    <div class="vsl">
+      <video id="vsl" autoplay muted playsinline preload="metadata" poster="img/vsl-poster.jpg" aria-label="A professora Helena Duarte explica o livro Deus, o Diabo e o Céu"><source src="img/vsl.mp4" type="video/mp4"></video>
+      <button type="button" class="vsl-som" id="vsl-som">🔊 Toque para ouvir a Helena</button>
+    </div>
     <p>Você cresceu ouvindo uma resposta. Seu vizinho cresceu ouvindo outra, e a dele também está escrita num livro sagrado. Aqui estão as 9 respostas lado a lado, cada uma com o versículo, o parágrafo ou o autor de onde saiu.</p>
     <a class="btn" href="https://pay.kiwify.com.br/J0er2R5" data-funil-cta="topo">Ver as respostas · R$&nbsp;19,90</a>
     <div class="selos">Acesso na hora no seu e-mail · 7 dias de garantia</div>
@@ -99,6 +105,7 @@ footer a{color:var(--suave)}
     <h2>Perguntas que <b>quase ninguém sabe responder</b></h2>
     <ul class="descobrir">
       <li>Por que a Bíblia dos católicos tem 7 livros que a dos evangélicos não tem</li>
+      <li>Jesus aparece 25 vezes no Alcorão, e Maomé, 4. Quem é Jesus para o islã</li>
       <li>O capítulo do Alcorão que tem o nome de Maria, a mãe de Jesus</li>
       <li>Quem chamou Exu de diabo, e em que século isso começou</li>
       <li>Para os espíritas não existe diabo eterno. Então quem são os "demônios"?</li>
@@ -245,6 +252,13 @@ footer a{color:var(--suave)}
 
 <footer>Religiões Explicadas · uma marca Mão na Renda · <a href="/privacidade/">Privacidade</a> · <a href="/termos/">Termos</a></footer>
 
+<script>
+// VSL: começa sem som (o navegador só deixa assim) e, no toque, volta ao início com som
+(function(){
+  var v=document.getElementById('vsl'),b=document.getElementById('vsl-som');
+  b.addEventListener('click',function(){v.currentTime=0;v.muted=false;v.controls=true;v.play();b.remove();});
+})();
+</script>
 <script src="../js/pixel.js?v=2026102501"></script>
 </body>
 </html>
