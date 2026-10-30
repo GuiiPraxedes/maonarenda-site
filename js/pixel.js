@@ -26,7 +26,8 @@
   var produtos = {
     '/ia/kit/': { content_name: 'Kit de Prompts', content_category: 'renda extra com IA', value: window.MNR_PRECO_KIT || 19, currency: 'BRL' },
     '/ia/': { content_name: 'Do Celular ao Balcão', content_category: 'renda extra com IA', value: 47, currency: 'BRL' },
-    '/religioes/': { content_name: 'Deus, o Diabo e o Céu', content_category: 'religiões explicadas', value: 19.90, currency: 'BRL' }
+    '/religioes/': { content_name: 'Deus, o Diabo e o Céu', content_category: 'religiões explicadas', value: 19.90, currency: 'BRL' },
+    '/luto/': { content_name: 'Para Onde Vão os Que Amamos', content_category: 'religiões explicadas', value: 19.90, currency: 'BRL' }
   };
   var produto = produtos[caminho];
   if (produto) fbq('track', 'ViewContent', produto);
