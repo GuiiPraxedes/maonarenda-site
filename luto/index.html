@@ -23,9 +23,6 @@ section{padding:56px 0}
 .rotulo{font-weight:800;letter-spacing:3px;font-size:14px;text-transform:uppercase;color:#a0782a;margin-bottom:10px}
 .hero{text-align:center;padding:48px 0 56px}
 .simb{color:var(--ouro);font-size:28px;letter-spacing:16px;margin-bottom:18px}
-.vsl{position:relative;width:300px;max-width:82%;margin:0 auto 22px}
-.vsl video{display:block;width:100%;aspect-ratio:9/16;border-radius:14px;background:#000;box-shadow:0 18px 40px rgba(0,0,0,.45)}
-.vsl-som{position:absolute;left:50%;bottom:16px;transform:translateX(-50%);white-space:nowrap;background:var(--botao);color:#111;border:0;border-radius:999px;padding:12px 18px;font:800 16px 'Source Sans 3',sans-serif;cursor:pointer;box-shadow:0 6px 16px rgba(0,0,0,.4)}
 .hero-foto{padding-top:0;background:var(--noite)}
 .hero-arte{position:relative;max-width:760px;margin:0 auto}
 .hero-arte img{display:block;width:100%;height:340px;object-fit:cover;object-position:50% 38%}
@@ -39,6 +36,7 @@ section{padding:56px 0}
 .hero h1 b{color:var(--ouro)}
 .hero p{font-size:20px;color:#d8dee9;max-width:620px;margin:0 auto 26px}
 .capa{width:220px;max-width:60%;border-radius:8px;box-shadow:0 18px 40px rgba(0,0,0,.45);margin:26px auto 0;display:block}
+.capa-topo{width:240px;height:auto;margin:6px auto 22px}
 .btn{display:inline-block;background:var(--botao);color:#111;font-weight:800;font-size:20px;text-decoration:none;padding:18px 30px;border-radius:999px;box-shadow:0 8px 20px rgba(0,0,0,.25)}
 .btn:hover{filter:brightness(1.08)}
 .selos{margin-top:14px;font-size:15px;color:#c5cfdd}
@@ -91,10 +89,7 @@ footer a{color:var(--suave)}
 <section class="escuro hero">
   <div class="w">
     <h1>Toda noite, a mesma pergunta: <b>onde ela está agora?</b></h1>
-    <div class="vsl">
-      <video id="vsl" autoplay muted playsinline preload="metadata" poster="img/vsl-poster.jpg?v=2026102901" aria-label="A professora Helena Duarte fala sobre o guia Para Onde Vão os Que Amamos"><source src="img/vsl.mp4?v=2026102901" type="video/mp4"></video>
-      <button type="button" class="vsl-som" id="vsl-som">🔊 Toque para ouvir a Helena</button>
-    </div>
+    <img class="capa capa-topo" src="img/capa.jpg?v=2026103001" alt="Capa do guia Para Onde Vão os Que Amamos" width="600" height="900" fetchpriority="high">
     <p>Um guia curto, para ler à noite, com o que as grandes religiões ensinam sobre quem partiu: se sofre, se ainda ouve a gente e se existe reencontro. Cada resposta com a fonte.</p>
     <a class="btn" href="https://pay.kiwify.com.br/MQZAB9P" data-funil-cta="topo">Quero o guia · R$&nbsp;19,90</a>
     <div class="selos">Acesso na hora no seu e-mail · 7 dias de garantia</div>
@@ -207,13 +202,6 @@ footer a{color:var(--suave)}
 
 <footer>Religiões Explicadas · uma marca Mão na Renda · <a href="/privacidade/">Privacidade</a> · <a href="/termos/">Termos</a></footer>
 
-<script>
-// VSL: começa sem som (o navegador só deixa assim) e, no toque, volta ao início com som
-(function(){
-  var v=document.getElementById('vsl'),b=document.getElementById('vsl-som');
-  b.addEventListener('click',function(){v.currentTime=0;v.muted=false;v.controls=true;v.play();b.remove();});
-})();
-</script>
 <script src="../js/pixel.js?v=2026102501"></script>
 </body>
 </html>
