@@ -2,7 +2,8 @@
    PageView em todas as páginas (menos /obrigado/*, ver abaixo), ViewContent nas páginas de produto e Lead ao baixar o
    guia grátis (uma vez por sessão).
    Eventos próprios, só para leitura (nunca escolher como meta de otimização), cada um no máximo uma vez por página:
-   CliqueCheckout (clique num link da Kiwify) e ProvouPrompt ("Copiar prompt" ou "Testar no ChatGPT" na /ia/kit/).
+   CliqueCheckout (clique num link da Kiwify), ProvouPrompt ("Copiar prompt" ou "Testar no ChatGPT" na /ia/kit/) e, nas
+   páginas com data-rolagem, Rolou<Nome> (o trecho marcado entrou na tela) e CliqueTopo (botão do topo que desce à oferta).
    InitiateCheckout e Purchase são disparados pela própria Kiwify (Pixel configurado em cada produto).
    Os parâmetros utm_* e fbclid seguem para o checkout, para a Kiwify atribuir a venda ao anúncio. Eles ficam guardados
    na sessão (sessionStorage, só eles) e valem também nas páginas abertas depois, sem parâmetros na URL. */
@@ -96,5 +97,29 @@
       feito.prova = true;
       fbq('trackCustom', 'ProvouPrompt', { acao: a.hasAttribute('data-copiar') ? 'copiar' : 'chatgpt' });
     }
+
+    // botão do topo que desce à oferta: a descida passa pelos trechos marcados, então Rolou<Nome> sozinho não prova leitura
+    a = alvo.closest('a[data-funil-cta="topo"][href="#oferta"]');
+    if (a && !feito.topo && document.querySelector('[data-rolagem]')) {
+      feito.topo = true;
+      fbq('trackCustom', 'CliqueTopo');
+    }
   });
+
+  // Rolagem: cada trecho com data-rolagem conta uma vez por página, ao entrar nos 70% de cima da tela. O nome vai no
+  // próprio evento porque a leitura do pixel pela API só separa por nome de evento.
+  function medirRolagem() {
+    var marcas = document.querySelectorAll('[data-rolagem]');
+    if (!marcas.length || !window.IntersectionObserver) return;
+    var observador = new IntersectionObserver(function (itens) {
+      for (var i = 0; i < itens.length; i++) {
+        if (!itens[i].isIntersecting) continue;
+        fbq('trackCustom', 'Rolou' + itens[i].target.getAttribute('data-rolagem'));
+        observador.unobserve(itens[i].target);
+      }
+    }, { rootMargin: '0px 0px -30% 0px' });
+    for (var i = 0; i < marcas.length; i++) observador.observe(marcas[i]);
+  }
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', medirRolagem);
+  else medirRolagem();
 })();
