@@ -80,6 +80,9 @@ h2 b{color:#a0782a}
 .item b{display:block;font-family:'Playfair Display',serif;font-size:19px;line-height:1.2;margin-bottom:2px}
 .item span{display:block;font-size:16px;color:#3c4650;line-height:1.4}
 .preco{text-align:center;margin-top:26px;background:var(--noite);color:#f7f1e3;border-radius:16px;padding:26px 18px}
+.preco .de{color:#c5cfdd;font-size:20px}
+.preco .de s{text-decoration-color:#e07a6e;text-decoration-thickness:2px}
+.btn s{font-weight:600;opacity:.7}
 .preco .por{font-family:'Playfair Display',serif;font-size:56px;color:var(--ouro);line-height:1;margin:2px 0 6px}
 .preco .por small{font-size:24px}
 .preco .det{color:#c5cfdd;font-size:16px;margin-bottom:18px}
@@ -135,7 +138,7 @@ html{scroll-behavior:smooth}
     <h1>Toda noite, a mesma pergunta: <b>onde ela está agora?</b></h1>
     <img class="capa capa-topo" src="img/capa.jpg?v=2026103001" alt="Capa do guia Para Onde Vão os Que Amamos" width="600" height="900" fetchpriority="high">
     <p>Um guia para ler em 7 noites, uma pergunta por noite, com o que as grandes religiões respondem a quem fica. Cada resposta com a fonte.</p>
-    <a class="btn" href="#oferta" data-funil-cta="topo">Ver o guia e os 3 presentes · R$&nbsp;27,90</a>
+    <a class="btn" href="#oferta" data-funil-cta="topo">Ver o guia e os 3 presentes · <s>R$&nbsp;149,99</s> R$&nbsp;27,90</a>
     <div class="selos">Acesso na hora no seu e-mail · 7 dias de garantia</div>
   </div>
 </section>
@@ -197,6 +200,7 @@ html{scroll-behavior:smooth}
       </ul>
     </div>
     <div class="preco" data-rolagem="Preco">
+      <div class="de">De <s>R$&nbsp;149,99</s> por</div>
       <div class="por"><small>R$</small> 27,90</div>
       <div class="det">o guia e os 3 presentes · pagamento único · acesso na hora no seu e-mail</div>
       <a class="btn" href="https://pay.kiwify.com.br/MQZAB9P" data-funil-cta="oferta">Quero o guia por R$&nbsp;27,90</a>
