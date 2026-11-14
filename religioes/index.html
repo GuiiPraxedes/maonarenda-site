@@ -60,7 +60,10 @@ td:first-child{font-weight:700;white-space:nowrap}
 .lista li:before{content:"✓";position:absolute;left:4px;color:#2e7d32;font-weight:800}
 .lista li.bonus:before{content:"🎁";left:0}
 .preco{text-align:center}
-.preco .de{color:#9aa5b1;text-decoration:line-through;font-size:20px}
+.preco .de{color:#5d6d7e;font-size:20px}
+.preco .de s{text-decoration-color:#c0392b;text-decoration-thickness:2px}
+.preco .urgente{display:inline-block;background:#fdecea;color:#a3271b;font-weight:800;font-size:15px;padding:6px 14px;border-radius:999px;margin-bottom:10px}
+.btn s{opacity:.7;font-weight:600}
 .preco .por{font-family:'Playfair Display',serif;font-size:64px;color:var(--ouro);line-height:1;margin:6px 0 4px}
 .preco .por small{font-size:26px}
 .garantia{display:flex;gap:18px;align-items:center}
@@ -68,13 +71,6 @@ td:first-child{font-weight:700;white-space:nowrap}
 details{background:#fff;border:1px solid #eadfc6;border-radius:12px;padding:14px 18px;margin-bottom:10px}
 summary{font-weight:700;cursor:pointer}
 details p{margin-top:8px}
-.depos{display:grid;gap:14px;margin-top:8px}
-.depo{background:#fff;border:1px solid #efe7d4;border-radius:14px;padding:18px 18px 14px}
-.depo p{font-size:18px;font-style:italic;margin-bottom:10px}
-.depo b{display:block;font-size:15px;color:#a0782a}
-.depo .quem{display:flex;align-items:center;gap:10px}
-.depo .quem img{width:44px;height:44px;border-radius:50%;flex:none}
-.depo .estrelas{color:#e0a800;letter-spacing:2px;font-size:15px;margin-bottom:6px}
 .ampliar{text-align:center;font-size:14px;color:#8a7b5c;margin-top:8px}
 .amostra img{width:100%;border-radius:10px;box-shadow:0 8px 24px rgba(0,0,0,.18);margin-top:12px}
 footer{text-align:center;font-size:14px;color:var(--suave);padding:28px 20px}
@@ -89,7 +85,7 @@ footer a{color:var(--suave)}
     <h1>O diabo existe mesmo? <b>Depende de quem responde.</b></h1>
     <img class="capa capa-topo" src="img/capa.jpg?v=2026103001" alt="Capa do livro Deus, o Diabo e o Céu" width="600" height="900" fetchpriority="high">
     <p>Você cresceu ouvindo uma resposta. Seu vizinho cresceu ouvindo outra, e a dele também está escrita num livro sagrado. Aqui estão as 9 respostas lado a lado, cada uma com o versículo, o parágrafo ou o autor de onde saiu.</p>
-    <a class="btn" href="#oferta" data-funil-cta="topo">Ver o livro e o mapa · R$&nbsp;19,90</a>
+    <a class="btn" href="#oferta" data-funil-cta="topo">Ver o livro e o mapa · <s>R$&nbsp;97,00</s> R$&nbsp;19,90</a>
     <div class="selos">Acesso na hora no seu e-mail · 7 dias de garantia</div>
   </div>
 </section>
@@ -121,7 +117,7 @@ footer a{color:var(--suave)}
       <div class="card"><strong>Exu é o diabo? Não.</strong>No candomblé, Exu é o orixá mensageiro, que abre os caminhos entre as pessoas e os orixás. Quem o chamou de diabo foram missionários cristãos do século 19. O livro explica a visão de quem pratica.<small>Reginaldo Prandi, "Exu, de mensageiro a diabo", Revista USP, 2001</small></div>
       <div class="card"><strong>O que acontece depois da morte?</strong>Para um católico, céu, purgatório ou inferno. Para um espírita, outra vida para aprender. Para um budista, renascer até se libertar do ciclo. Três religiões, três respostas.<small>Catecismo §1022 e §1030; O Livro dos Espíritos, q. 149 e 166; Peter Harvey, An Introduction to Buddhism (2013)</small></div>
     </div>
-    <div style="text-align:center;margin-top:26px"><a class="btn" href="https://pay.kiwify.com.br/J0er2R5" data-funil-cta="fatos">Ler as 12 respostas · R$&nbsp;19,90</a></div>
+    <div style="text-align:center;margin-top:26px"><a class="btn" href="https://pay.kiwify.com.br/J0er2R5" data-funil-cta="fatos">Ler as 12 respostas · <s>R$&nbsp;97,00</s> R$&nbsp;19,90</a></div>
   </div>
 </section>
 
@@ -164,9 +160,10 @@ footer a{color:var(--suave)}
     <div class="rotulo">Veja como é por dentro</div>
     <h2>Cada pergunta abre com um quadro lado a lado</h2>
     <p>Você bate o olho e vê as 9 respostas juntas. Depois vem um parágrafo curto sobre cada religião, sempre dizendo de onde vem a ideia, e no fim as fontes.</p>
-    <div class="amostra"><a href="img/amostra.jpg" target="_blank" rel="noopener"><img src="img/amostra.jpg" alt="Página de exemplo do livro com o quadro comparativo"></a><div class="ampliar">Toque na página para ver em tamanho real</div></div>
+    <div class="amostra"><a href="img/amostra.jpg" target="_blank" rel="noopener"><img src="img/amostra.jpg" alt="Página de exemplo do livro com o quadro comparativo" width="1075" height="943" loading="lazy"></a><div class="ampliar">Toque na página para ver em tamanho real</div></div>
     <p style="margin-top:14px">As 9 tradições do livro:</p>
     <div class="trad"><span>Catolicismo</span><span>Protestantismo</span><span>Judaísmo</span><span>Islamismo</span><span>Espiritismo</span><span>Budismo</span><span>Hinduísmo</span><span>Candomblé</span><span>Umbanda</span></div>
+    <div style="text-align:center;margin-top:28px"><a class="btn" href="https://pay.kiwify.com.br/J0er2R5" data-funil-cta="amostra">Quero o livro e o mapa · <s>R$&nbsp;97,00</s> R$&nbsp;19,90</a></div>
   </div>
 </section>
 
@@ -177,18 +174,6 @@ footer a{color:var(--suave)}
     <div class="respeito">
       <p>Cada ideia aparece dita por quem a ensina: "segundo a doutrina católica", "no Alcorão", "para o espiritismo". Toda resposta tem fonte, do versículo ao parágrafo do Catecismo. Quando uma religião não tem o conceito, o livro diz isso em vez de forçar uma comparação.</p>
       <p style="margin-top:10px">Serve para quem tem fé e quer conhecer a dos outros, para quem está em dúvida e para quem quer conversar sobre o assunto em casa sem medo de falar besteira.</p>
-    </div>
-  </div>
-</section>
-
-<section style="background:#fff8ec">
-  <div class="w">
-    <div class="rotulo">Quem já leu</div>
-    <h2>O que os leitores <b>disseram</b></h2>
-    <div class="depos">
-      <div class="depo"><div class="estrelas">★★★★★</div><p>"Depois que eu li esse livro, minha mente abriu pra muita coisa."</p><div class="quem"><img src="img/depo/alice.png?v=2" alt="" width="44" height="44" loading="lazy"><b>Alice Maria</b></div></div>
-      <div class="depo"><div class="estrelas">★★★★★</div><p>"Entendi a fé da minha família e passei a respeitar."</p><div class="quem"><img src="img/depo/ricardo.png?v=2" alt="" width="44" height="44" loading="lazy"><b>Ricardo Andrade</b></div></div>
-      <div class="depo"><div class="estrelas">★★★★★</div><p>"Decidi que vou procurar saber mais sobre o espiritismo e o evangelho."</p><div class="quem"><img src="img/depo/manoella.png?v=2" alt="" width="44" height="44" loading="lazy"><b>Manoella Davilla</b></div></div>
     </div>
   </div>
 </section>
@@ -208,7 +193,7 @@ footer a{color:var(--suave)}
   <div class="w">
     <div class="rotulo">O que você recebe</div>
     <h2>Deus, o Diabo e o Céu + o Mapa das Religiões</h2>
-    <img class="capa oferta-capa" src="img/capa.jpg" alt="Capa do livro Deus, o Diabo e o Céu" loading="lazy">
+    <img class="capa oferta-capa" src="img/capa.jpg" alt="Capa do livro Deus, o Diabo e o Céu" width="600" height="900" loading="lazy">
     <ul class="lista">
       <li><b>O livro, com 52 páginas.</b> As 12 perguntas, cada uma respondida pelas 9 religiões. Dá para ler uma pergunta em uns 5 minutos, na ordem que você quiser.</li>
       <li><b>Um quadro no começo de cada pergunta.</b> As 9 respostas juntas numa página, para comparar sem ficar indo e voltando.</li>
@@ -217,6 +202,8 @@ footer a{color:var(--suave)}
     </ul>
     <div class="amostra"><a href="img/mapa.jpg" target="_blank" rel="noopener"><img src="img/mapa.jpg" alt="Mapa das Religiões: as 12 perguntas e as 9 religiões numa folha" width="1754" height="1240" loading="lazy"></a><div class="ampliar">O Mapa das Religiões. Toque para ver em tamanho real</div></div>
     <div class="preco" style="margin-top:28px">
+      <div class="urgente">Promoção por tempo limitado</div>
+      <div class="de">De <s>R$ 97,00</s> por</div>
       <div class="por"><small>R$</small> 19,90</div>
       <div style="color:var(--suave);margin-bottom:18px">o livro e o mapa · pagamento único · acesso na hora no seu e-mail</div>
       <a class="btn" href="https://pay.kiwify.com.br/J0er2R5" data-funil-cta="oferta">Quero as respostas por R$&nbsp;19,90</a>
@@ -247,6 +234,6 @@ footer a{color:var(--suave)}
 
 <footer>Religiões Explicadas · uma marca Mão na Renda · <a href="/privacidade/">Privacidade</a> · <a href="/termos/">Termos</a></footer>
 
-<script src="../js/pixel.js?v=2026102501"></script>
+<script src="../js/pixel.js?v=2026111402"></script>
 </body>
 </html>
