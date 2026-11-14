@@ -3,13 +3,198 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Para Onde Vão os Que Amamos</title>
-<!-- Inicial desativada em 01/11/2026 (pedido do Guilherme): leva à oferta ligada. A verificação do domínio no Meta tem de ficar aqui. -->
+<title>Religiões Explicadas: o que cada religião ensina, com a fonte</title>
+<meta name="description" content="Livros digitais curtos sobre o que 9 religiões ensinam, com a fonte de cada resposta: Deus, o Diabo e o Céu e Para Onde Vão os Que Amamos.">
+<!-- A verificação do domínio no Meta tem de ficar aqui. -->
 <meta name="facebook-domain-verification" content="bnuyqs57gzomriiptpouoidt3kudyc">
-<meta name="robots" content="noindex">
-<link rel="canonical" href="https://maonarenda.com.br/luto/">
-<meta http-equiv="refresh" content="0; url=/luto/">
-<script>location.replace('/luto/' + location.search + location.hash)</script>
+<link rel="canonical" href="https://maonarenda.com.br/">
+<meta property="og:title" content="Religiões Explicadas">
+<meta property="og:description" content="O que 9 religiões ensinam, com a fonte de cada resposta.">
+<meta property="og:image" content="https://maonarenda.com.br/religioes/img/capa.jpg">
+<link rel="icon" href="https://maonarenda.com.br/religioes/img/icone.png">
+<meta name="theme-color" content="#0f1d33">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;0,900;1,600&family=Source+Sans+3:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--noite:#0f1d33;--azul:#1d3557;--ouro:#e9c46a;--ouro-escuro:#8a6516;--creme:#fbf8f1;--pergaminho:#f1e7d0;--texto:#1f2328;--suave:#55606e;--botao:#c9a227;--linha:#e3d6b8}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Source Sans 3',sans-serif;color:var(--texto);background:var(--creme);font-size:18px;line-height:1.6}
+img{max-width:100%;height:auto;display:block}
+h1,h2,h3{text-wrap:balance;font-family:'Playfair Display',serif;font-weight:700;line-height:1.12}
+a:focus-visible{outline:3px solid var(--ouro);outline-offset:3px}
+a,button{touch-action:manipulation;-webkit-tap-highlight-color:rgba(233,196,106,.25)}
+.pular{position:absolute;left:12px;top:-60px;background:var(--ouro);color:#111;font-weight:700;padding:10px 16px;border-radius:8px;z-index:10}
+.pular:focus{top:12px}
+.livro{scroll-margin-top:16px}
+.desc,.sub,.passos span{text-wrap:pretty}
+.w{max-width:1080px;margin:0 auto;padding:0 24px}
+
+/* Topo: a promessa e o índice de fontes */
+.topo{background:var(--noite);color:#f4eddc;padding:28px 0 72px}
+.marca{font-family:'Playfair Display',serif;font-size:21px;color:#f4eddc;text-decoration:none;display:inline-flex;align-items:center;gap:10px;margin-bottom:64px}
+.marca img{width:30px;height:30px;border-radius:6px}
+.topo-grade{display:grid;grid-template-columns:1.05fr .95fr;gap:64px;align-items:start}
+.topo h1{font-size:50px;font-weight:900;letter-spacing:-.5px;margin-bottom:22px;max-width:14ch}
+.topo .sub{color:#cfc6b2;font-size:19px;max-width:44ch;margin-bottom:32px}
+.btn{display:inline-block;background:var(--botao);color:#111;font-weight:800;font-size:18px;text-decoration:none;padding:15px 30px;border-radius:999px;box-shadow:0 8px 22px rgba(0,0,0,.25)}
+.btn:hover{background:var(--ouro)}
+.btn-claro{background:transparent;color:#f4eddc;box-shadow:none;border:1.5px solid rgba(233,196,106,.6);margin-left:10px}
+.btn-claro:hover{background:rgba(233,196,106,.12)}
+.indice{border-left:1px solid rgba(233,196,106,.35);padding-left:32px}
+.indice p{font-size:15px;color:#b9b09c;margin-bottom:18px;max-width:36ch}
+.indice dl{display:grid;grid-template-columns:auto 1fr;column-gap:22px}
+.indice dt,.indice dd{padding:9px 0;border-bottom:1px solid rgba(244,237,220,.09)}
+.indice dt{font-family:'Playfair Display',serif;font-size:19px;color:var(--ouro)}
+.indice dd{font-size:16px;color:#e6dfcd}
+
+/* Os livros, em faixas */
+.livro{padding:84px 0}
+.livro:nth-of-type(2){background:var(--pergaminho)}
+.livro-grade{display:grid;grid-template-columns:360px 1fr;gap:72px;align-items:center}
+.livro-inv .livro-grade{grid-template-columns:1fr 360px}
+.livro-inv .capa{order:2}
+.capa img{border-radius:4px;box-shadow:0 2px 4px rgba(0,0,0,.2),0 24px 48px rgba(15,29,51,.32);transform:rotate(-1.5deg)}
+.livro-inv .capa img{transform:rotate(1.5deg)}
+.pergunta{font-family:'Playfair Display',serif;font-style:italic;font-weight:600;font-size:22px;color:var(--ouro-escuro);margin-bottom:12px}
+.livro h2{font-size:40px;color:var(--noite);margin-bottom:16px}
+.livro .desc{color:var(--suave);font-size:19px;max-width:52ch;margin-bottom:22px}
+.fatos{list-style:none;display:flex;flex-wrap:wrap;gap:10px;margin-bottom:30px}
+.fatos li{font-size:15px;font-weight:600;color:var(--azul);background:rgba(29,53,87,.07);padding:6px 14px;border-radius:999px}
+.compra{display:flex;align-items:center;gap:22px;flex-wrap:wrap}
+.preco{font-family:'Playfair Display',serif;font-size:34px;font-weight:700;color:var(--noite)}
+.preco small{display:block;font-family:'Source Sans 3',sans-serif;font-size:14px;font-weight:600;color:var(--suave)}
+
+/* Como funciona: é uma sequência de verdade */
+.como{padding:76px 0;border-top:1px solid var(--linha)}
+.como h2{font-size:32px;color:var(--noite);margin-bottom:34px}
+.passos{list-style:none;display:grid;grid-template-columns:repeat(3,1fr);gap:40px;counter-reset:p}
+.passos li{counter-increment:p}
+.passos li:before{content:counter(p);font-family:'Playfair Display',serif;font-size:44px;font-weight:900;color:var(--ouro-escuro);display:block;line-height:1;margin-bottom:10px}
+.passos b{display:block;font-size:19px;margin-bottom:4px}
+.passos span{color:var(--suave);font-size:17px}
+.contato{margin-top:44px;color:var(--suave);font-size:17px}
+.contato a{color:var(--azul);font-weight:700}
+
+footer{background:var(--noite);color:#b9b09c;font-size:15px;padding:32px 0}
+footer .w{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+footer a{color:var(--ouro)}
+footer a:hover,.contato a:hover{text-decoration-thickness:2px}
+footer .cvv{color:#f4eddc;font-weight:600}
+
+/* Único movimento: o índice de fontes aparece linha a linha ao abrir */
+@media (prefers-reduced-motion:no-preference){
+  .indice dt,.indice dd{opacity:0;animation:surge .5s ease forwards}
+  .indice dl > :nth-child(1),.indice dl > :nth-child(2){animation-delay:.15s}
+  .indice dl > :nth-child(3),.indice dl > :nth-child(4){animation-delay:.25s}
+  .indice dl > :nth-child(5),.indice dl > :nth-child(6){animation-delay:.35s}
+  .indice dl > :nth-child(7),.indice dl > :nth-child(8){animation-delay:.45s}
+  .indice dl > :nth-child(9),.indice dl > :nth-child(10){animation-delay:.55s}
+  .indice dl > :nth-child(11),.indice dl > :nth-child(12){animation-delay:.65s}
+  .indice dl > :nth-child(13),.indice dl > :nth-child(14){animation-delay:.75s}
+  .indice dl > :nth-child(15),.indice dl > :nth-child(16){animation-delay:.85s}
+  @keyframes surge{to{opacity:1}}
+}
+
+@media (max-width:860px){
+  .topo{padding-bottom:52px}
+  .marca{margin-bottom:40px}
+  .topo-grade,.livro-grade,.livro-inv .livro-grade{grid-template-columns:1fr;gap:40px}
+  .topo h1{font-size:36px}
+  .indice{border-left:0;padding-left:0;border-top:1px solid rgba(233,196,106,.35);padding-top:28px}
+  .livro{padding:56px 0}
+  .capa{max-width:240px;margin:0 auto}
+  .livro-inv .capa{order:0}
+  .livro h2{font-size:31px}
+  .passos{grid-template-columns:1fr;gap:26px}
+  .btn-claro{margin:12px 0 0}
+}
+</style>
 </head>
-<body><a href="/luto/">Continuar</a></body>
+<body>
+<a class="pular" href="#principal">Pular para os livros</a>
+<header class="topo">
+  <div class="w">
+    <a class="marca" href="/"><img src="https://maonarenda.com.br/religioes/img/icone.png" alt="" width="30" height="30"><span translate="no">Religiões Explicadas</span></a>
+    <div class="topo-grade">
+      <div>
+        <h1>O que cada religião ensina, e onde isso está escrito</h1>
+        <p class="sub">Livros digitais curtos, para ler no celular. A gente não diz qual religião está certa: põe as respostas lado a lado e mostra a fonte de cada uma.</p>
+        <a class="btn" href="#deus">Ver os livros</a>
+      </div>
+      <aside class="indice" aria-label="Fontes usadas nos livros">
+        <p>Quem responde por cada tradição nos nossos livros:</p>
+        <dl>
+          <dt>Catolicismo</dt><dd>Catecismo da Igreja Católica</dd>
+          <dt>Protestantismo</dt><dd>Confissão de Westminster</dd>
+          <dt>Judaísmo</dt><dd>Mishná e Maimônides</dd>
+          <dt>Islã</dt><dd>Alcorão</dd>
+          <dt>Espiritismo</dt><dd>O Livro dos Espíritos</dd>
+          <dt>Hinduísmo</dt><dd>Bhagavad Gita</dd>
+          <dt>Budismo</dt><dd>Peter Harvey e outros estudiosos</dd>
+          <dt>Candomblé e umbanda</dt><dd>Reginaldo Prandi, Pierre Verger, Roger Bastide e Renato Ortiz</dd>
+        </dl>
+      </aside>
+    </div>
+  </div>
+</header>
+
+<main id="principal">
+<section class="livro" id="deus" aria-labelledby="t-deus">
+  <div class="w livro-grade">
+    <div class="capa"><img src="https://maonarenda.com.br/religioes/img/capa.jpg" alt="Capa do livro Deus, o Diabo e o Céu" width="600" height="900"></div>
+    <div>
+      <p class="pergunta">O diabo existe mesmo? Depende de quem responde.</p>
+      <h2 id="t-deus">Deus, o Diabo e o Céu</h2>
+      <p class="desc">As 12 maiores perguntas da vida, de quem é Deus ao que vem depois da morte, com a resposta de 9 religiões lado a lado. Quando uma religião não tem o conceito, o livro diz isso em vez de forçar uma resposta.</p>
+      <ul class="fatos"><li>12 perguntas</li><li>9 religiões</li><li>52 páginas em PDF</li></ul>
+      <div class="compra">
+        <p class="preco">R$&nbsp;19,90<small>Acesso na hora, 7 dias de garantia</small></p>
+        <a class="btn" href="/religioes/">Ver o livro</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="livro livro-inv" id="luto" aria-labelledby="t-luto">
+  <div class="w livro-grade">
+    <div class="capa"><img src="https://maonarenda.com.br/luto/img/capa.jpg" alt="Capa do guia Para Onde Vão os Que Amamos" width="600" height="900" loading="lazy"></div>
+    <div>
+      <p class="pergunta">Onde ela está agora?</p>
+      <h2 id="t-luto">Para Onde Vão os Que Amamos</h2>
+      <p class="desc">O Protocolo das 7 Noites: a cada noite, uma das perguntas que não saem da cabeça depois de uma perda e o que cada tradição responde, em uns 10 minutos de leitura. Para quem quer entender o luto, o próprio ou o de alguém próximo.</p>
+      <ul class="fatos"><li>7 noites</li><li>6 leituras e 1 noite para escrever</li><li>guia e 3 presentes em PDF</li></ul>
+      <div class="compra">
+        <p class="preco">R$&nbsp;27,90<small>Acesso na hora, 7 dias de garantia</small></p>
+        <a class="btn" href="/luto/">Ver o guia</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="como" aria-labelledby="t-como">
+  <div class="w">
+    <h2 id="t-como">Como funciona</h2>
+    <ol class="passos">
+      <li><b>Escolha o livro</b><span>A página de cada um mostra o que tem dentro antes de você comprar.</span></li>
+      <li><b>Pague com segurança</b><span>Pix ou cartão, pela Kiwify.</span></li>
+      <li><b>Leia na hora</b><span>O acesso chega no seu e-mail. Leia no celular, no tablet ou no computador, ou baixe o PDF.</span></li>
+    </ol>
+    <p class="contato">Ficou alguma dúvida? Escreva para <a href="mailto:maonarenda.contato@gmail.com">maonarenda.contato@gmail.com</a></p>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="w">
+    <p class="cvv">Se precisar conversar: CVV, ligue 188, de graça, 24 horas.</p>
+    <p>Religiões Explicadas, uma marca Mão na Renda. <a href="/privacidade/">Privacidade</a> e <a href="/termos/">Termos</a></p>
+  </div>
+</footer>
+<script>
+// Leva os utm de quem chega pela Página do Facebook para a página do livro.
+if (location.search) document.querySelectorAll('.compra a').forEach(function(a){ a.href = a.getAttribute('href') + location.search; });
+</script>
+<script src="/js/pixel.js?v=2026111401"></script>
+</body>
 </html>
