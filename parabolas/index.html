@@ -51,7 +51,7 @@
     .button { display: inline-flex; justify-content: center; align-items: center; min-height: 3rem; padding: .65rem 1.1rem; border: 1px solid transparent; border-radius: .35rem; font: 700 .98rem/1.3 system-ui, sans-serif; text-align: center; text-decoration: none; }
     .button-gold { background: var(--gold); color: var(--forest); }
     .hero-art { width: min(100%, 27rem); justify-self: center; }
-    .hero-art img { display: block; width: 100%; height: auto; border: 1px solid #ffffff55; border-radius: .45rem; }
+    .hero-art video { display: block; width: 100%; height: auto; aspect-ratio: 16 / 9; background: #151d17; border: 1px solid #ffffff55; border-radius: .45rem; }
     .section { padding-block: clamp(2.75rem, 6vw, 5rem); }
     .section-lead { max-width: 36rem; margin-top: .75rem; }
     .study { display: grid; grid-template-columns: .9fr 1.1fr; align-items: start; gap: clamp(1.7rem, 6vw, 5rem); }
@@ -100,8 +100,12 @@
           <p class="hero-garantia">Promoção por tempo limitado. Garantia de 7 dias.</p>
         </div>
         <figure class="hero-art">
-          <img src="img/bom-samaritano.webp" width="800" height="800" alt="Ficha do Bom Samaritano, com a referência em Lucas, a história, o ensinamento e uma pergunta para refletir" fetchpriority="high">
-          <figcaption>Uma das 30 fichas da coleção.</figcaption>
+          <video controls playsinline preload="none" width="1280" height="720"
+                 poster="img/helena-bom-samaritano.webp" aria-labelledby="legenda-video">
+            <source src="img/helena-bom-samaritano.mp4" type="video/mp4">
+            <a href="img/helena-bom-samaritano.mp4">Assistir ao vídeo do Bom Samaritano</a>
+          </video>
+          <figcaption id="legenda-video">Veja como a Helena usa a ficha do Bom Samaritano em um estudo.</figcaption>
         </figure>
       </div>
     </section>
